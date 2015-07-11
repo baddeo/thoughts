@@ -65,4 +65,52 @@ if ( post_password_required() ) {
 				?>
 			</ol><!-- .commentlist -->
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to
+			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+				<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
+					<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'independent-publisher' ); ?></h1>
+
+					<div class="nav-previous"><?php previous_comments_link( '<button>' . __( '&larr; Older Comments', 'independent-publisher' ) . '</button>' ); ?></div>
+					<div class="nav-next"><?php next_comments_link( '<button>' . __( 'Newer Comments &rarr;', 'independent-publisher' ) . '</button>' ); ?></div>
+				</nav><!-- #comment-nav-below .site-navigation .comment-navigation -->
+			<?php endif; // check for comment navigation ?>
+
+		<?php endif; // have_comments() ?>
+
+		<?php
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+			?>
+			<p class="nocomments"><?php _e( 'Comments are closed.', 'independent-publisher' ); ?></p>
+		<?php endif; ?>
+
+		<?php if ( comments_open() && get_comments_number() >= independent_publisher_min_comments_bottom_comment_button() ) : ?>
+
+			<?php do_action( 'independent_publisher_before_bottom_comment_button' ); ?>
+
+			<div id="share-comment-button-bottom">
+				<button>
+					<i class="share-comment-icon"></i><?php echo independent_publisher_comments_call_to_action_text() ?>
+				</button>
+			</div>
+			<div id="commentform-bottom"></div> <!-- do not remove; used by jQuery to move the comment reply form here -->
+		<?php endif; ?>
+
+		<?php if ( have_comments() && get_comments_number() > 0 ) : // Only show pings/trackbacks if there's at least 1 comment ?>
+			<?php if ( count( $wp_query->comments_by_type['pings'] ) ) { ?>
+				<div id="pinglist">
+					<ul class="pinglist">
+						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_title', __( 'Readers who shared this', 'independent-publisher' ) ); ?></li>
+						<?php independent_publisher_pings(); ?>
+						<li class="pinglist-title"><?php echo apply_filters( 'independent_publisher_pingslist_end_note', __( 'Thank you!', 'independent-publisher' ) ); ?></li>
+					</ul>
+				</div>
+			<?php } // end if ( count($wp_query->comments_by_type['pings']))?>
+		<?php endif; // end have_comments() ?>
+
+		<?php if ( comments_open() && have_comments() && get_comments_number() > 0 ) : ?>
+			<?php independent_publisher_replytocom(); // Handles Reply to Comment links properly when JavaScript is enabled ?>
+		<?php endif; ?>
+
+	</div><!-- #comments .comments-area -->
+
+<?php endif; // if ( ! independent_publisher_hide_comments() ) ?>
