@@ -1,0 +1,157 @@
+@import "_mixins";
+
+// GENERAL
+
+body
+{
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;	
+}
+
+
+// FONTS
+
+	
+	// FACES
+
+	// @font-face{font-family:AdelleBold;src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Bold.eot);src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Bold.eot?#iefix) format('embedded-opentype'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Bold.woff2) format('woff2'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Bold.woff) format('woff'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Bold.ttf) format('truetype');font-weight:700}
+
+	// @font-face{font-family:AdelleLight;src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Light.eot);src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Light.eot?#iefix) format('embedded-opentype'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Light.woff2) format('woff2'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Light.woff) format('woff'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Light.ttf) format('truetype');font-weight:400;font-style:normal}
+
+	// @font-face{font-family:Adelle;src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Regular.eot);src:url(../fonts/AdelleSansWeb/AdelleSansBasic_Regular.eot?#iefix) format('embedded-opentype'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Regular.woff2) format('woff2'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Regular.woff) format('woff'),url(../fonts/AdelleSansWeb/AdelleSansBasic_Regular.ttf) format('truetype');font-weight:400;font-style:normal}
+
+
+body
+{
+	@include serif('PT Serif');
+	font-weight: 400;
+
+	b, strong
+	{
+		font-weight: 700;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.main-navigation a
+	{
+		@include sans-serif('Etica');
+		font-weight: 700;
+	}
+
+	.site-description
+	{
+		// @include sans-serif('Etica Light');
+		font-weight: 300;
+	}
+
+	blockquote
+	{
+		@include sans-serif('Etica');
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	p
+	{
+		a
+		{
+			@include sans-serif('Etica');
+			font-weight: 700;
+			font-size: 1.15em;
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	pre, code, kbd, tt, var 
+	{
+		font-family: 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
+	}
+
+	pre
+	{
+	}
+
+	.entry-meta
+	{
+		@include sans-serif('Etica');
+	}		
+}
+
+	// EXPERIMENTS
+
+		body.etica
+		{
+			@include sans-serif('Etica Light');
+			font-weight: 300;
+
+			h1, h2, h3, h4, h5, h6
+			{
+				@include sans-serif('Etica');
+				font-weight: 700;
+			}
+
+			.site-description
+			{
+				@include sans-serif('Etica Light');
+			}
+		}
+		body.etica.pt
+		{
+			@include serif('PT Serif');
+			font-weight: 300;
+
+			h1, h2, h3, h4, h5, h6
+			{
+				@include sans-serif('Etica');
+				font-weight: 700;
+			}	
+		}
+		body.etica.mw
+		{
+			@include serif('Merriweather');
+			font-weight: 400;
+
+			h1, h2, h3, h4, h5, h6
+			{
+				@include sans-serif('Etica');
+				font-weight: 700;
+			}	
+		}
+		body.lekton
+		{
+			@include sans-serif('Lekton');
+			font-weight: 300;
+
+			h1, h2, h3, h4, h5, h6
+			{
+				@include sans-serif('Lekton');
+				font-weight: 700;
+			}
+		}
+
+
+// SIZES
+
+html, body
+{
+	font-size: $unit;
+	line-height: 1.5;
+}
+
+.site-title
+{
+	font-size: 1rem;
+}
+
+.site-description
+{
+	font-size: .75rem;
+}
+
+// SPACES
+
+ul, ol 
+{
+	margin: 0 0 1.5em 1.25em;
+}

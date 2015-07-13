@@ -19,6 +19,26 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+
+	<!-- Etica from TypeKit
+	<script src="//use.typekit.net/ryo3ksd.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script> -->
+	
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	
+	<!-- UN-Etica -->
+	<link href='<?php echo get_template_directory_uri(); ?>/fonts/etica/etica-ttf.css' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_template_directory_uri(); ?>/fonts/etica/etica-light-ttf.css' rel='stylesheet' type='text/css'>
+	
+	<!-- STYLESHEETS -->
+	<link href='<?php echo get_template_directory_uri(); ?>/css/ip.css' rel='stylesheet' type='text/css'>
+	<link href='<?php echo get_template_directory_uri(); ?>/css/baddeo.css' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
@@ -37,9 +57,11 @@
 	</div>
 <?php endif; ?>
 
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+	
 		<div class="site-header-info">
 			<?php if ( is_single() ) : ?>
 				<?php // Show only post author info on Single Pages ?>
@@ -62,11 +84,10 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
 				<?php endif; ?>
 
-			</nav><!-- .site-navigation .main-navigation -->
+			</nav>
 		<?php endif; ?>
 
 		<?php do_action( 'independent_publisher_header_after' ); ?>
 	</header>
-	<!-- #masthead .site-header -->
 
 	<div id="main" class="site-main">

@@ -1,0 +1,7 @@
+@mixin sans-serif($style-name) {
+	font-family: "#{$style-name}", -apple-system-font, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin serif($style-name) {
+	font-family: "#{$style-name}", Georgia, serif;
+}

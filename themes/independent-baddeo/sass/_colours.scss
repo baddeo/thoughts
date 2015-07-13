@@ -1,0 +1,119 @@
+// $main-colour: $blue;
+// $main-colour: $m-red;
+// $main-colour: $m-orange;
+$main-colour: $green;
+$main-colour: $turquoise;
+
+body
+{
+	background: $white;
+	// background: $cream;
+	color: 		$dark-grey;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	color: $black;
+}
+
+pre, code, kbd, tt, var
+{
+	background: rgba($main-colour, 0.1);
+}
+pre code
+{
+	background: transparent;
+}	
+
+a
+{
+	color: $main-colour;
+
+	&:visited,
+	&:hover,
+	&:focus,
+	&:active 
+	{
+		color: $main-colour;
+	}
+}
+
+.entry-title
+{
+	a
+	{
+		color: $black;
+
+		&:hover
+		{
+			color: $main-colour;
+		}
+	}
+}
+
+.site-title,
+.main-navigation
+{
+	a
+	{
+		color: $main-colour;
+
+		&:hover
+		{
+			color: $black;
+			text-decoration: none;
+		}
+	}
+}
+
+blockquote 
+{
+	border-color: $main-colour;
+}
+
+.site-description
+{
+	color: $dark-grey;
+}
+.site-description,
+.entry-meta, .entry-meta a
+{
+	color: $grey;
+}
+
+.blog, .archive, .search
+{
+	article
+	{
+		border-bottom: solid 1px $grey;
+		border-bottom: solid 1px $pale-grey;
+	}	
+} 
+
+@media only screen and (max-width: 1200px) 
+{
+	.site-header
+	{
+		border-bottom: solid 1px $pale-grey;
+	}
+	.site-navigation
+	{
+		// border-bottom: solid 1px $pale-grey;
+	}
+}
+
+
+input[type=text],
+input[type=password],
+input[type=email],
+textarea 
+{
+	border: 1px solid $grey;
+	border: 1px solid $pale-grey;
+	color: $black;
+
+	&:focus
+	{
+
+	}
+}

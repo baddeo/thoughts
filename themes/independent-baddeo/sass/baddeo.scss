@@ -1,1 +1,25 @@
 @import "_config";
+@import "_typography";
+@import "_colours";
+@import "_animations";
+
+@media only screen and (max-width: 1200px)
+{
+	.site-header
+	{
+		// do the white thing here?
+		// position absolute, background white etc
+	}
+}	
+
+.site-logo
+{
+	&:before 
+	{
+		content: ' ';
+		position: absolute;
+		border-radius: 100%;
+		height: 10px;
+		width: 10px;
+	}
+}

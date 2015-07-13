@@ -1,0 +1,30 @@
+.animated-fast
+{
+	transition: all ease 0.4s;
+}	
+
+.animated-slow
+{
+	transition: all ease 0.8s;
+}	
+
+// from animate.css
+
+.animated 
+{
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.fadeInUpBig 
+{
+	-webkit-animation-name: fadeInUpBig;
+	animation-name: fadeInUpBig;
+}
+
+a
+{
+	@extend .animated-fast;
+}
