@@ -77,8 +77,11 @@ function independent_baddeo_show_comments() {
 }
 
 function independent_baddeo_show_reading_time() {
-	// TODO 
-	return true;
+	$independent_publisher_general_options = get_option( 'independent_publisher_general_options' );
+	if ( isset( $independent_publisher_general_options['show_post_reading_time'] ) && $independent_publisher_general_options['show_post_reading_time'] ) {
+		return true;
+	} 
+	else return false;
 }
 
 function independent_baddeo_get_reading_time() {
@@ -91,7 +94,8 @@ function independent_baddeo_get_reading_time() {
 	$reading_time = number_format($word_count / $words_per_minute);
 	$reading_time_string = 'About ' . $reading_time . ' minute';
 	if ($reading_time > 2) $reading_time_string .= 's';
-	if ($reading_time < 1) $reading_time_string = 'Less than a minute'; 
+	if ($reading_time < 1) $reading_time_string = 'Less than a minute';
+	$reading_time_string .= ' to read'; 
 	
 	// TODO
 	$separator = '';

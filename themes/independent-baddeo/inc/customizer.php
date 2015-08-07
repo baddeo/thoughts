@@ -36,6 +36,13 @@ class IndependentPublisher_Customize {
 		);
 
 		$wp_customize->add_section(
+			 'independent_baddeo_post_meta', array(
+					 'title'    => __( 'Post meta', 'independent-baddeo' ),
+					 'priority' => 134,
+				 )
+		);
+
+		$wp_customize->add_section(
 			 'independent_baddeo_naming_options', array(
 					 'title'    => __( 'How to call things', 'independent-baddeo' ),
 					 'priority' => 135,
@@ -100,40 +107,58 @@ class IndependentPublisher_Customize {
 							 )
 			);
 
-		// Show Post Word Count
+		// Show date in post meta
 			$wp_customize->add_setting(
-						 'independent_publisher_general_options[show_post_word_count]', array(
-								 'default'    => false,
-								 'type'       => 'option',
-								 'capability' => 'edit_theme_options',
-								 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
-							 )
+				 'independent_publisher_general_options[show_date_entry_meta]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
 			);
 			$wp_customize->add_control(
-						 'show_post_word_count', array(
-								 'settings' => 'independent_publisher_general_options[show_post_word_count]',
-								 'label'    => __( 'Show Post Word Count in Entry Meta', 'independent-publisher' ),
-								 'section'  => 'independent_publisher_general_options',
-								 'type'     => 'checkbox',
-							 )
+				 'show_date_entry_meta', array(
+						 'settings' => 'independent_publisher_general_options[show_date_entry_meta]',
+						 'label'    => __( 'Show date', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_post_meta',
+						 'type'     => 'checkbox',
+					 )
+			);		
+
+		// Show post word count
+			$wp_customize->add_setting(
+				 'independent_publisher_general_options[show_post_word_count]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
+			);
+			$wp_customize->add_control(
+				 'show_post_word_count', array(
+						 'settings' => 'independent_publisher_general_options[show_post_word_count]',
+						 'label'    => __( 'Show word count', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_post_meta',
+						 'type'     => 'checkbox',
+					 )
 			);
 
-		// Show Date in Entry Meta
+		// Show post reading time
 			$wp_customize->add_setting(
-						 'independent_publisher_general_options[show_date_entry_meta]', array(
-								 'default'    => false,
-								 'type'       => 'option',
-								 'capability' => 'edit_theme_options',
-								 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
-							 )
+				 'independent_publisher_general_options[show_post_reading_time]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
 			);
 			$wp_customize->add_control(
-						 'show_date_entry_meta', array(
-								 'settings' => 'independent_publisher_general_options[show_date_entry_meta]',
-								 'label'    => __( 'Show Post Date in Entry Meta', 'independent-publisher' ),
-								 'section'  => 'independent_publisher_general_options',
-								 'type'     => 'checkbox',
-							 )
+				 'show_post_reading_time', array(
+						 'settings' => 'independent_publisher_general_options[show_post_reading_time]',
+						 'label'    => __( 'Show reading time', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_post_meta',
+						 'type'     => 'checkbox',
+					 )
 			);
 
 		// Show Widgets on Single Posts
