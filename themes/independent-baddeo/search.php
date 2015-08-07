@@ -18,7 +18,7 @@ get_header(); ?>
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'independent-publisher' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					<?php echo apply_filters( 'search_meta', '<div class="search-stats-description">' . $search_stats . '</div>' ); ?>
-					<?php independent_publisher_content_nav( 'nav-above' ); ?>
+					<?php independent_baddeo_content_nav( 'nav-above' ); ?>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php independent_publisher_content_nav( 'nav-below' ); ?>
+				<?php independent_baddeo_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

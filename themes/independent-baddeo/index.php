@@ -32,7 +32,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php independent_publisher_content_nav( 'nav-below' ); ?>
+				<?php independent_baddeo_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

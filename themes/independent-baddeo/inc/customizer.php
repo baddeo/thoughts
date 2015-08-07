@@ -298,6 +298,42 @@ class IndependentPublisher_Customize {
 							 )
 			);
 
+		// Previous posts text
+			$wp_customize->add_setting(
+						 'previous_posts_text', array(
+								 'default'    => 'Older posts',
+								 'type'       => 'theme_mod',
+								 'capability' => 'edit_theme_options',
+								 'sanitize_callback' => 'sanitize_text_field',
+							 )
+			);
+			$wp_customize->add_control(
+						 'previous_posts_text', array(
+								 'settings' => 'previous_posts_text',
+								 'label'    => __( 'Previous posts text', 'independent-baddeo' ),
+								 'section'  => 'independent_baddeo_naming_options',
+								 'type'     => 'text',
+							 )
+			);	
+
+		// Next posts text
+			$wp_customize->add_setting(
+						 'next_posts_text', array(
+								 'default'    => 'Newer posts',
+								 'type'       => 'theme_mod',
+								 'capability' => 'edit_theme_options',
+								 'sanitize_callback' => 'sanitize_text_field',
+							 )
+			);
+			$wp_customize->add_control(
+						 'next_posts_text', array(
+								 'settings' => 'next_posts_text',
+								 'label'    => __( 'Next posts text', 'independent-baddeo' ),
+								 'section'  => 'independent_baddeo_naming_options',
+								 'type'     => 'text',
+							 )
+			);		
+
 		// Color options
 
 			$colors = array();

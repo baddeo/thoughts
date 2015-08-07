@@ -127,6 +127,16 @@ if ( ! function_exists( 'independent_publisher_setup' ) ):
 endif; // independent_publisher_setup
 add_action( 'after_setup_theme', 'independent_publisher_setup' );
 
+if ( ! function_exists( 'independent_baddeo_setup' ) ):
+
+	function independent_baddeo_setup() {
+
+		require ( get_template_directory() . '/inc/baddeo.php' );
+
+	}
+endif; // independent_baddeo_setup
+add_action( 'after_setup_theme', 'independent_baddeo_setup' );
+
 /**
  * Include additional plugin support routines
  */

@@ -44,7 +44,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php independent_publisher_content_nav( 'nav-below' ); ?>
+				<?php independent_baddeo_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
