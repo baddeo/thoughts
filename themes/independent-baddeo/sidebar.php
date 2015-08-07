@@ -24,14 +24,14 @@
 				</ul>
 			</aside>
 
-			<aside id="meta" class="widget">
+			<!-- <aside id="meta" class="widget">
 				<h1 class="widget-title"><?php _e( 'Meta', 'independent-publisher' ); ?></h1>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>
 					<?php wp_meta(); ?>
 				</ul>
-			</aside>
+			</aside> -->
 
 		<?php endif; // end sidebar widget area ?>
 	<?php endif; ?>
