@@ -92,10 +92,10 @@ function independent_baddeo_get_reading_time() {
 	$word_count = number_format( str_word_count( strip_tags( $content ) ) );
 	$words_per_minute = 200; // see https://en.wikipedia.org/wiki/Words_per_minute
 	$reading_time = number_format($word_count / $words_per_minute);
-	$reading_time_string = 'About ' . $reading_time . ' minute';
+	if ($reading_time < 1) $reading_time = 1;
+	$reading_time_string = $reading_time . ' minute';
 	if ($reading_time > 2) $reading_time_string .= 's';
-	if ($reading_time < 1) $reading_time_string = 'Less than a minute';
-	$reading_time_string .= ' to read'; 
+	$reading_time_string .= ' read'; 
 	
 	// TODO
 	$separator = '';
