@@ -32,12 +32,20 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] 
 {
-	// height: 36px;
-	// padding-left: 15px;
-	// padding-right: 15px;
 	border: 0;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: antialiased;
 }
 
+// SPACING
+
+.blog ,
+.archive,
+.search
+{
+	article
+	{
+		padding: $unit*2 0;
+	}
+}

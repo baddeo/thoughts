@@ -1642,13 +1642,6 @@ h6 {
 	font-size: 3.5em;
 }
 
-.blog article,
-.archive article,
-.search article {
-	padding: 40px 0 40px 0;
-	border-bottom: solid 1px #ddd;
-}
-
 .blog article.show-full-content-first-post {
 	padding-top: 0;
 }
@@ -1722,19 +1715,9 @@ article.first-post {
 	display: none;
 }
 
-.entry-meta,
-.entry-meta a {
-	// color: #b3b3b1;
-	font-size: 13px;
-	// font-family: sans-serif;
-	font-weight: 100;
-	font-style: normal;
-	text-align: right;
-}
-
 .single .entry-meta,
 .page .entry-meta {
-	border-top: 1px solid #eee;
+	// border-top: 1px solid #eee;
 	margin-bottom: 40px;
 	margin-top: 40px;
 	padding-top: 40px;
