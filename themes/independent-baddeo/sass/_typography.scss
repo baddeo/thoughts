@@ -75,9 +75,20 @@ body
 	.entry-meta
 	{
 		@include sans-serif('Etica');
-	}		
-}
+	}	
 
+	button,
+	html input[type="button"],
+	input[type="reset"],
+	input[type="submit"] 
+	{
+		@include sans-serif('Etica');
+		text-decoration: none;
+		// line-height: 1.45;
+		// font-size: 15px;
+		// font-size: 1.5rem;
+	}
+}
 	// EXPERIMENTS
 
 		body.etica

@@ -24,7 +24,9 @@
 	animation-name: fadeInUpBig;
 }
 
-a
+a,
+button,
+input
 {
 	@extend .animated-fast;
 }
