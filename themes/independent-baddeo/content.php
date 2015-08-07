@@ -86,13 +86,23 @@
 			<?php echo independent_publisher_get_post_word_count() ?>
 		<?php endif; ?>
 
-		<?php /* Show comments link only when post is not password-protected AND comments are enabled on this post */ ?>
-		<?php if ( ! post_password_required() && comments_open() && ! independent_publisher_hide_comments() ) : ?>
+		<?php /* Show  reading time*/
+		?>
+		<?php if ( independent_baddeo_show_reading_time() ) : ?>
+			<?php echo independent_baddeo_get_reading_time() ?>
+		<?php endif; ?>
+
+		<?php 
+			/* Show comments link only when post is not password-protected AND comments are enabled on this post */ 
+			if ( ! post_password_required() && comments_open() && independent_baddeo_show_comments() ) : 
+		?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Comment', 'independent-publisher' ), __( '1 Comment', 'independent-publisher' ), __( '% Comments', 'independent-publisher' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' ); ?>
-		<?php edit_post_link( __( 'Edit', 'independent-publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); ?>
+		<?php 
+			// $separator = apply_filters( 'independent_publisher_entry_meta_separator', '|' );  
+			// edit_post_link( __( 'Edit', 'independent-publisher' ), '<span class="sep"> ' . $separator . ' </span> <span class="edit-link">', '</span>' ); 
+		?>
 
 	</footer>
 	<!-- .entry-meta -->

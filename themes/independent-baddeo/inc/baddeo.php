@@ -70,3 +70,31 @@ function independent_baddeo_next_posts_text() {
 		return __( 'Next', 'independent-baddeo' );
 	}
 }
+
+function independent_baddeo_show_comments() {
+	// TODO 
+	return false;
+}
+
+function independent_baddeo_show_reading_time() {
+	// TODO 
+	return true;
+}
+
+function independent_baddeo_get_reading_time() {
+
+	global $post;
+
+	$content = get_post_field( 'post_content', $post->ID );
+	$word_count = number_format( str_word_count( strip_tags( $content ) ) );
+	$words_per_minute = 200; // see https://en.wikipedia.org/wiki/Words_per_minute
+	$reading_time = number_format($word_count / $words_per_minute);
+	$reading_time_string = 'About ' . $reading_time . ' minute';
+	if ($reading_time > 2) $reading_time_string .= 's';
+	if ($reading_time < 1) $reading_time_string = 'Less than a minute'; 
+	
+	// TODO
+	$separator = '';
+
+	return sprintf( '<span>' . __( '%1$s', 'independent-baddeo' ) . '</span>%2$s', $reading_time_string, $separator );
+}
