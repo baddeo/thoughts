@@ -15,29 +15,36 @@ class IndependentPublisher_Customize {
 	public static function register( $wp_customize ) {
 
 		$wp_customize->add_section(
-					 'independent_publisher_layout_options', array(
-							 'title'    => __( 'Layout Options', 'independent-publisher' ),
-							 'priority' => 124,
-						 )
+			 'independent_publisher_layout_options', array(
+					 'title'    => __( 'Layout Options', 'independent-publisher' ),
+					 'priority' => 124,
+				 )
 		);
 
 		$wp_customize->add_section(
-					 'independent_publisher_excerpt_options', array(
-							 'title'    => __( 'Excerpt Options', 'independent-publisher' ),
-							 'priority' => 125,
-						 )
+			 'independent_publisher_excerpt_options', array(
+					 'title'    => __( 'Excerpt Options', 'independent-publisher' ),
+					 'priority' => 125,
+				 )
 		);
 
 		$wp_customize->add_section(
-					 'independent_publisher_general_options', array(
-							 'title'    => __( 'General Options', 'independent-publisher' ),
-							 'priority' => 130,
-						 )
+			 'independent_publisher_general_options', array(
+					 'title'    => __( 'General Options', 'independent-publisher' ),
+					 'priority' => 130,
+				 )
 		);
 
 		$wp_customize->add_section(
 			 'independent_baddeo_post_meta', array(
-					 'title'    => __( 'Post meta', 'independent-baddeo' ),
+					 'title'    => __( 'Posts meta', 'independent-baddeo' ),
+					 'priority' => 133,
+				 )
+		);
+
+		$wp_customize->add_section(
+			 'independent_baddeo_single_post', array(
+					 'title'    => __( 'Single posts', 'independent-baddeo' ),
 					 'priority' => 134,
 				 )
 		);
@@ -161,58 +168,58 @@ class IndependentPublisher_Customize {
 					 )
 			);
 
-		// Show Widgets on Single Posts
+		// Show widgets on single posts
 			$wp_customize->add_setting(
-						 'independent_publisher_general_options[show_widgets_on_single]', array(
-								 'default'    => false,
-								 'type'       => 'option',
-								 'capability' => 'edit_theme_options',
-								 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
-							 )
+				 'independent_publisher_general_options[show_widgets_on_single]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
 			);
 			$wp_customize->add_control(
-						 'show_widgets_on_single', array(
-								 'settings' => 'independent_publisher_general_options[show_widgets_on_single]',
-								 'label'    => __( 'Show Widgets on Single Posts', 'independent-publisher' ),
-								 'section'  => 'independent_publisher_general_options',
-								 'type'     => 'checkbox',
-							 )
+				 'show_widgets_on_single', array(
+						 'settings' => 'independent_publisher_general_options[show_widgets_on_single]',
+						 'label'    => __( 'Show widgets', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_single_post',
+						 'type'     => 'checkbox',
+					 )
 			);
 
-		// Show Nav Menu on Single Posts
+		// Show nav menu on single posts
 			$wp_customize->add_setting(
-						 'independent_publisher_general_options[show_nav_menu_on_single]', array(
-								 'default'    => false,
-								 'type'       => 'option',
-								 'capability' => 'edit_theme_options',
-								 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
-							 )
+				 'independent_publisher_general_options[show_nav_menu_on_single]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
 			);
 			$wp_customize->add_control(
-						 'show_nav_menu_on_single', array(
-								 'settings' => 'independent_publisher_general_options[show_nav_menu_on_single]',
-								 'label'    => __( 'Show Nav Menu on Single Posts', 'independent-publisher' ),
-								 'section'  => 'independent_publisher_general_options',
-								 'type'     => 'checkbox',
-							 )
+				 'show_nav_menu_on_single', array(
+						 'settings' => 'independent_publisher_general_options[show_nav_menu_on_single]',
+						 'label'    => __( 'Show nav menu', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_single_post',
+						 'type'     => 'checkbox',
+					 )
 			);
 
-		// Show Updated Date on Single Posts
+		// Show updated date on Single Posts
 			$wp_customize->add_setting(
-						 'independent_publisher_general_options[show_updated_date_on_single]', array(
-								 'default'    => false,
-								 'type'       => 'option',
-								 'capability' => 'edit_theme_options',
-								 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
-							 )
+				 'independent_publisher_general_options[show_updated_date_on_single]', array(
+						 'default'    => false,
+						 'type'       => 'option',
+						 'capability' => 'edit_theme_options',
+						 'sanitize_callback' => 'independent_publisher_sanitize_checkbox',
+					 )
 			);
 			$wp_customize->add_control(
-						 'show_updated_date_on_single', array(
-								 'settings' => 'independent_publisher_general_options[show_updated_date_on_single]',
-								 'label'    => __( 'Show Updated Date on Single Posts', 'independent-publisher' ),
-								 'section'  => 'independent_publisher_general_options',
-								 'type'     => 'checkbox',
-							 )
+				 'show_updated_date_on_single', array(
+						 'settings' => 'independent_publisher_general_options[show_updated_date_on_single]',
+						 'label'    => __( 'Show updated date', 'independent-publisher' ),
+						 'section'  => 'independent_baddeo_single_post',
+						 'type'     => 'checkbox',
+					 )
 			);
 
 		// Single-Column Layout
