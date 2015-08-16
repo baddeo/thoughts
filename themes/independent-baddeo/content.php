@@ -8,30 +8,38 @@
 	
 	<footer class="entry-meta">
 
-		<?php /* Show author name and post categories only when post type == post AND we're not showing the first post full content */ ?>
-		<?php if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) : // post type == post conditional hides category text for Pages on Search ?>
-			<?php independent_publisher_posted_author_cats() ?>
-		<?php endif; ?>
-
-		<?php /* Show post date when show post date option enabled */
+		<?php 
+			/* Show author name and post categories only when post type == post AND we're not showing the first post full content */ 
+			if ( 'post' == get_post_type() && independent_publisher_is_not_first_post_full_content() ) 
+			{
+				independent_publisher_posted_author_cats();
+			}
 		?>
-		<?php if ( independent_publisher_show_date_entry_meta() ) : ?>
-			<?php echo independent_publisher_get_post_date() ?>
-		<?php endif; ?>
 
-		<?php /* Show post word count when post is not password-protected AND this is a Standard post format AND
- 							post word count option enabled AND we're not showing the first post full content*/
+		<?php 
+			/* Show post date when show post date option enabled */
+			if ( independent_publisher_show_date_entry_meta() )
+			{
+				echo independent_publisher_get_post_date();
+			} 
 		?>
-		<?php if ( ! post_password_required() && false === get_post_format() && independent_publisher_show_post_word_count() && independent_publisher_is_not_first_post_full_content() ) : ?>
-			<?php echo independent_publisher_get_post_word_count() ?>
-		<?php endif; ?>
-
-		<?php /* Show  reading time*/
+		
+		<?php 
+			/* Show post word count */
+			if ( independent_publisher_show_post_word_count() ) 
+			{
+				echo independent_publisher_get_post_word_count();
+			} 
 		?>
-		<?php if ( independent_baddeo_show_reading_time() ) : ?>
-			<?php echo independent_baddeo_get_reading_time() ?>
-		<?php endif; ?>
 
+		<?php 
+			/* Show  reading time*/
+		 	if ( independent_baddeo_show_reading_time() )
+		 	{
+		 		echo independent_baddeo_get_reading_time();
+		 	}  
+		?>
+		
 		<?php 
 			/* Show comments link only when post is not password-protected AND comments are enabled on this post */ 
 			if ( ! post_password_required() && comments_open() && independent_baddeo_show_comments() ) : 
