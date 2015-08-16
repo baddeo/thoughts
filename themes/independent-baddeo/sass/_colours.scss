@@ -38,33 +38,36 @@ a
 	}
 }
 
-.entry-title
+.entry-title a
 {
-	a
-	{
-		color: $black;
+	color: $black;
 
-		&:hover
-		{
-			color: $main-colour;
-		}
-	}
-}
-
-.site-title,
-.main-navigation
-{
-	a
+	&:hover
 	{
 		color: $main-colour;
-
-		&:hover
-		{
-			color: $black;
-			text-decoration: none;
-		}
 	}
 }
+
+.site-title a,
+.main-navigation a,
+{
+	color: $main-colour;
+
+	&:hover
+	{
+		color: $black;
+		text-decoration: none;
+	}
+}
+
+#menu-social li a::before 
+{
+	color: $grey;
+}
+#menu-social li a:hover::before 
+{
+	color: $main-colour;	
+}	
 
 blockquote 
 {

@@ -40,12 +40,38 @@ input[type="submit"]
 
 // SPACING
 
-.blog ,
+.blog,
 .archive,
-.search
+.search,
+.single
 {
 	article
 	{
 		padding: $unit*2 0;
 	}
+}
+
+#menu-social ul 
+{
+	margin: 0 0 $unit;
+}  
+
+ul, ol 
+{
+	margin: 0 0 1.5em 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	margin: $unit 0;
+}
+
+#menu-social li a::before 
+{
+	// padding: 0 $unit/3;
 }

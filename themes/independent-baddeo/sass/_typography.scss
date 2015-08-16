@@ -166,9 +166,8 @@ html, body
 	// text-align: right;
 }
 
-// SPACES
-
-ul, ol 
+#menu-social li a::before 
 {
-	margin: 0 0 1.5em 1.25em;
+	// font-size: 1.5rem;
 }
+

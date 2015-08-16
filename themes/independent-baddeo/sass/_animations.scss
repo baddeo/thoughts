@@ -26,7 +26,9 @@
 
 a,
 button,
-input
+input,
+#menu-social a:hover::before,
+#menu-social a::before
 {
 	@extend .animated-fast;
 }
