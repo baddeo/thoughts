@@ -560,7 +560,7 @@ Accessibility
 }
 
 .single article.post, .single article.page {
-	margin-bottom: 40px;
+	// margin-bottom: 40px;
 }
 
 .single .wp-post-image,
@@ -1471,7 +1471,7 @@ body
 }
 
 .site-published-date a {
-	color: #929292;
+	// color: #929292;
 	text-decoration: none;
 }
 
@@ -1485,9 +1485,9 @@ body
 
 .main-navigation li,
 .widget-area li {
-	line-height: .80;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	// line-height: .80;
+	// padding-top: 5px;
+	// padding-bottom: 5px;
 	margin: 0;
 }
 
@@ -1551,7 +1551,7 @@ body
 }
 
 #infinite-footer .blog-credits {
-	color: #b3b3b1;
+	// color: #b3b3b1;
 	// font-family: sans-serif;
 	font-weight: 100;
 }
@@ -1561,12 +1561,12 @@ body
 
 #infinite-footer .blog-credits a,
 #infinite-footer .blog-credits a:hover {
-	color: #57ad68;
+	// color: #57ad68;
 }
 
 /* Inifnite Scroll - Spinner */
 .infinite-loader {
-	color: #000;
+	// color: #000;
 	position: fixed;
 	bottom: 0;
 }
@@ -1577,11 +1577,11 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 20px 0;
+	// margin: 20px 0;
 	// font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
-	color: #333332;
+	// color: #333332;
 	/*letter-spacing: -1px;*/
-	font-weight: 700;
+	// font-weight: 700;
 	/*line-height: 1;*/
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
@@ -1691,36 +1691,36 @@ article.first-post {
 }
 
 .entry-title-meta {
-	font-size: 13px;
-	color: #b3b3b1;
-	font-weight: 100;
-	letter-spacing: 1px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	font-style: normal;
-	line-height: 1.4;
+	// font-size: 13px;
+	// color: #b3b3b1;
+	// font-weight: 100;
+	// letter-spacing: 1px;
+	// margin-bottom: 0px;
+	// margin-top: 0px;
+	// font-style: normal;
+	// line-height: 1.4;
 }
 
-.entry-title-meta-post-date,
-.entry-title-meta-author .author-avatar {
-	display: none;
-}
+// .entry-title-meta-post-date,
+// .entry-title-meta-author .author-avatar {
+// 	display: none;
+// }
 
-.entry-title-meta a {
-	color: #b3b3b1;
-	text-decoration: none;
-}
+// .entry-title-meta a {
+// 	color: #b3b3b1;
+// 	text-decoration: none;
+// }
 
-.entry-title-meta-author {
-	display: none;
-}
+// .entry-title-meta-author {
+// 	display: none;
+// }
 
 .single .entry-meta,
 .page .entry-meta {
 	// border-top: 1px solid #eee;
-	margin-bottom: 40px;
-	margin-top: 40px;
-	padding-top: 40px;
+	// margin-bottom: 40px;
+	// margin-top: 40px;
+	// padding-top: 40px;
 }
 
 .single .edit-link,
@@ -1800,7 +1800,7 @@ article.first-post {
 }
 
 .site-footer a:hover {
-	color: #57ad68;
+	// color: #57ad68;
 }
 
 .site-info {
@@ -1949,7 +1949,7 @@ table th {
 }
 
 .author .archive-title a {
-	color: #333332;
+	// color: #333332;
 }
 
 .author .archive-title a:hover {
@@ -2149,7 +2149,7 @@ table th {
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle,
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-title {
     padding: 20px 0 5px;
-    color:#fff;
+    // color:#fff;
     margin: 0;
 }
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-subtitle {
@@ -2173,7 +2173,7 @@ table th {
 }
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta,
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a {
-    color: rgba(255,255,255,0.80);
+    // color: rgba(255,255,255,0.80);
 }
 .single.post-cover-overlay-post-title .post-cover-title-head .entry-title-meta a:hover {
     text-decoration: underline;
@@ -2192,7 +2192,7 @@ table th {
 
 #menu-social ul {
 	list-style: none;
-	margin: 0 0 25px;
+	// margin: 0 0 25px;
 }
 
 #menu-social ul li {
@@ -2203,9 +2203,9 @@ table th {
 #menu-social li a::before {
 	content: '\f408';
 	display: inline-block;
-	padding: 0 5px;
+	// padding: 0 5px;
 	font-family: 'Genericons';
-	font-size: 26px;
+	// font-size: 26px;
 	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
 }
@@ -2213,153 +2213,77 @@ table th {
 #menu-social li a[href*="wordpress.org"]::before,
 #menu-social li a[href*="wordpress.com"]::before {
 	content: '\f205';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="wordpress.org"]:hover::before,
-#menu-social li a[href*="wordpress.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="facebook.com"]::before {
 	content: '\f203';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="facebook.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="twitter.com"]::before {
 	content: '\f202';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="twitter.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="dribbble.com"]::before {
 	content: '\f201';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="dribbble.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="plus.google.com"]::before {
 	content: '\f206';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="plus.google.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="pinterest.com"]::before {
 	content: '\f210';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="pinterest.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="github.com"]::before {
 	content: '\f200';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="github.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="tumblr.com"]::before {
 	content: '\f214';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="tumblr.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="youtube.com"]::before {
 	content: '\f213';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="youtube.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="flickr.com"]::before {
 	content: '\f211';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="flickr.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="vimeo.com"]::before {
 	content: '\f212';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="vimeo.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="instagram.com"]::before {
 	content: '\f215';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="instagram.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="codepen.io"]::before {
 	content: '\f216';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="codepen.io"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="linkedin.com"]::before {
-	content: '\f208';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="linkedin.com"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	content: '\f207';
+	// color: #BBC7D3;
 }
 
 #menu-social li a[href*="mailto"]::before {
 	content: '\f410';
-	color: #BBC7D3;
-}
-
-#menu-social li a[href*="mailto"]:hover::before {
-	transition: color ease 0.3s;
-	color: #4A4A4E;
+	// color: #BBC7D3;
 }
 
 /* Hide left-side author card under 1200px */
@@ -2399,7 +2323,7 @@ table th {
 	}
 
 	.single .site-header-info {
-		display: none;
+		// display: none;
 	}
 
 	.site-header {
