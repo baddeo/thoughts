@@ -517,14 +517,16 @@ if ( ! function_exists( 'independent_publisher_get_post_date' ) ) :
 	 * Returns post date formatted for display in theme
 	 * @return string
 	 */
-	function independent_publisher_get_post_date() {
-		if ( ( comments_open() && ! independent_publisher_hide_comments() ) || ( independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
+	function independent_publisher_get_post_date() 
+	{
+		return independent_publisher_posted_on_date();	
+		/*if ( ( comments_open() && ! independent_publisher_hide_comments() ) || ( independent_publisher_show_post_word_count() && ! get_post_format() ) ) {
 			$separator = ' <span class="sep"> ' . apply_filters( 'independent_publisher_entry_meta_separator', '|' ) . ' </span>';
 		} else {
 			$separator = '';
 		}
 
-		return independent_publisher_posted_on_date() . $separator;
+		return independent_publisher_posted_on_date() . $separator;*/
 	}
 endif;
 
