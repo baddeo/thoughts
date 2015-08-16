@@ -63,13 +63,19 @@
 	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 	
 		<div class="site-header-info">
-			<?php if ( is_single() ) : ?>
-				<?php // Show only post author info on Single Pages ?>
-				<?php independent_publisher_posted_author_card(); ?>
-			<?php else : ?>
-				<?php // Show Header Image, Site Title, and Site Tagline on everything except Single Pages ?>
-				<?php independent_publisher_site_info(); ?>
-			<?php endif; ?>
+			<?php 
+				/*if ( is_single() ) 
+				{
+					// Show only post author info on Single Pages
+					independent_publisher_posted_author_card();
+				} 
+				else
+				{
+					// Show Header Image, Site Title, and Site Tagline
+					independent_publisher_site_info();
+				}*/	
+				independent_publisher_site_info();
+			?>
 		</div>
 
 		<?php // Show navigation menu on everything except Single pages, unless Show Primary Nav Menu on Single Pages is enabled ?>
